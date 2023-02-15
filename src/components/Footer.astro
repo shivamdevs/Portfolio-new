@@ -1,0 +1,108 @@
+---
+---
+
+<footer class="footer">
+    <div class="logo">
+        <img src="/profilee.jpg" alt="" class="image">
+        <div class="text">Shivam Dewangan</div>
+    </div>
+    <div class="content">
+        <div class="tagline">Living, learning, & leveling up one day at a time.</div>
+        <div class="links">
+            <a href="/social/twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="/social/linkedin" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> Linkedin</a>
+            <a href="/social/github" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Github</a>
+            <a href="/social/email" target="_blank" rel="noopener noreferrer"><i class="far fa-envelope"></i> Email</a>
+        </div>
+        <div class="handcraft">Handcrafted by me. <i class="fas fa-at"></i> 2023</div>
+        <div class="madewith">Made with <img src="/astro-80x80.png" alt="Astro" class="astro-HSB7B5KK"> Astro</div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        --background: #02030ccc;
+    }
+    .footer {
+        /* background-color: var(--background); */
+        margin-top: 50px;
+        border-top: 1px solid #fff1;
+        padding: 60px 20px;
+        display: flex;
+        backdrop-filter: blur(8px);
+        justify-content: space-between;
+        gap: 50px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .logo {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-inline: auto;
+        justify-content: center;
+        gap: 20px;
+    }
+    .image {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px #8185b465;
+        object-fit: cover;
+    }
+    .text {
+        font-family: 'Signika', sans-serif;
+        font-size: 30px;
+        color: var(--logo-color);
+    }
+    .content {
+        width: 100%;
+        max-width: 800px;
+        margin-inline: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .tagline {
+        font-size: 20px;
+        text-align: center;
+    }
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+    .links a {
+        box-shadow: 0 0 0 2px #fff9;
+        border-radius: 10px;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff9;
+        transition: .2s;
+        text-decoration: none;
+    }
+    .links a:hover {
+        background-color: #fff;
+        box-shadow: 0 0 0 2px #fff;
+        color: var(--background);
+    }
+    .handcraft {
+        color: #fffa;
+    }
+    .madewith {
+        color: #727888;
+        display: flex;
+        align-items: center;
+    }
+    .madewith > img {
+        width: 40px;
+    }
+</style>

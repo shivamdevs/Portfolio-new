@@ -1,0 +1,22 @@
+---
+import FlyCard from '../components/FlyCard.astro';
+import FoldCard from '../components/FoldCard.astro';
+import Intro from '../components/home/Intro.astro';
+import IntroCards from '../components/home/IntroCards.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="">
+    <Intro />
+    <FoldCard>
+        <h1>Hi, I’m Shivam Dewangan. Nice to meet you.</h1>
+        <p>My journey as a full-stack developer started over 4 years ago, when i was still a High school graduate. Since then I became curious to learn more about this field. I learned many languages over time, and also took this route in the College by applying in full-stack programming. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</p>
+    </FoldCard>
+    <FlyCard width="1200" area={true}>
+		<IntroCards/>
+	</FlyCard>
+</Layout>
+
+<style>
+    
+</style>

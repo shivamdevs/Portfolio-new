@@ -1,0 +1,200 @@
+---
+---
+
+<header class="header">
+    <div class="item">
+        <a class="icon" href="/">
+            <img class="image" src="/android-chrome-512x512.png" alt="" />
+            <span class="logo">Shivam Dewangan</span>
+        </a>
+    </div>
+    <div class="item link mobile-hidden">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/starter">Starter Projects</a>
+        <a href="/working">Working Projects</a>
+        <a href="/startup">Startup</a>
+        <a href="/contact">Say Hello</a>
+    </div>
+    <div class="item burger desktop-hidden">
+        <button id="openmenu" type="button" class="btn">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <aside class="header-menu link">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/starter">Starter Projects</a>
+        <a href="/working">Working Projects</a>
+        <a href="/startup">Startup</a>
+        <a href="/contact">Say Hello</a>
+    </aside>
+</header>
+
+<style>
+    .header, .header-menu {
+        --background: #02030c99;
+        --background-button: #ffffff11;
+        --background-button-hover: #ffffff22;
+        --background-button-active: #ffffff44;
+
+        --color-button: #eeeeee;
+
+        --shadow-button-hover: #ffffff11;
+        --shadow-button-active: #ffffff77;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: transparent;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ffffff05;
+        z-index: 99;
+        position: sticky;
+        top: 0;
+        background-color: var(--background);
+        backdrop-filter: blur(6px);
+    }
+    .item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .icon {
+        text-decoration: none;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 15px;
+        color: #fff;
+    }
+    .logo {
+        font-size: 25px;
+        font-family: 'Signika', sans-serif;
+        color: var(--logo-color);
+        white-space: nowrap;
+    }
+    .image {
+        width: 45px;
+        height: 45px;
+    }
+    .link {
+        gap: 1px;
+    }
+    .link > a {
+        padding: 12px 20px;
+        background: var(--background-button);
+        color: var(--color-button);
+        text-decoration: none;
+        transition: 0.2s;
+        white-space: nowrap;
+    }
+    .link > a:hover {
+        color: #ffffff;
+        background-color: var(--background-button-hover);
+        box-shadow: 0 0 0 1px var(--shadow-button-hover) inset;
+    }
+    .link:not(.header-menu) > a:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+    .link:not(.header-menu) > a:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+    .link > a.active {
+        background-color: var(--background-button-active);
+        box-shadow: 0 0 0 1px var(--shadow-button-active) inset;
+    }
+
+    .header:not(.mobile) .desktop-hidden {
+        display: none;
+    }
+    .header.mobile .mobile-hidden {
+        display: none;
+    }
+
+    .btn {
+        display: inline-flex;
+        width: 45px;
+        height: 45px;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        border: none;
+        border-radius: 50%;
+        transition: 0.2s;
+        background-color: var(--background-button);
+    }
+    .btn:hover {
+        cursor: pointer;
+        background-color: var(--background-button-hover);
+    }
+    .btn:active {
+        background-color: var(--background-button-active);
+    }
+    .header:has(> .header-menu:not(.visible)) .btn .fa-times {
+        display: none;
+    }
+    .header:has(> .header-menu.visible) .btn .fa-bars {
+        display: none;
+    }
+
+    .header-menu {
+        position: absolute;
+        inset: 100% 0 0 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        transition: .2s;
+        z-index: 1;
+        background-color: #02030c;
+        padding: 0 20px;
+    }
+    .header-menu a {
+        border-radius: 30px;
+    }
+    .header-menu a:first-child {
+        margin-top: 20px;
+    }
+    .header-menu.visible {
+        bottom: calc(100% - 100vh);
+    }
+</style>
+
+<script load:client>
+    document.querySelectorAll(".link > a").forEach((a) => {
+        if (a.getAttribute("href") === location.pathname)
+            a.classList.add("active");
+    });
+
+    function headerScroll() {}
+    document.addEventListener("scroll", headerScroll);
+
+    const headerLinkArea = document.querySelector(".link").getBoundingClientRect().width +
+    document.querySelector(".header .icon").getBoundingClientRect().width + 100;
+    
+    function headerResize() {
+        if (window.innerWidth < headerLinkArea) {
+            document.querySelector(".header").classList.add("mobile");
+        } else {
+            document.querySelector(".header").classList.remove("mobile");
+        }
+    }
+    window.addEventListener("resize", () => {
+        headerResize();
+        closemenu();
+    });
+    headerResize();
+
+    function togglemenu() {
+        document.querySelector(".header-menu").classList.toggle("visible");
+    }
+    function closemenu() {
+        document.querySelector(".header-menu").classList.remove("visible");
+    }
+
+    document.getElementById("openmenu").addEventListener("click", togglemenu);
+</script>

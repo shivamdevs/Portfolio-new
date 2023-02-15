@@ -1,0 +1,103 @@
+---
+	let { title, subtitle, projects } = Astro.props;
+---
+
+<section class="projects">
+    <h1 class="title">{title}</h1>
+    <p class="subtitle">{subtitle}</p>
+    <div class="cards">
+        {projects?.map((project: {
+            name: string,
+            href: string,
+            body?: string,
+            icon?: string,
+            from?: string,
+            data?: string,
+        }) => (
+            <div class="item">
+                <div class="card">
+                    <a href={project.href} target="_blank" rel="noopener noreferrer">
+                        <img src={project.icon || "/noimage.svg"} alt="" class="image" />
+                    </a>
+                    <a href={project.href} target="_blank" rel="noopener noreferrer" class="name">{project.name}</a>
+                    <a href={project.href} target="_blank" rel="noopener noreferrer" class="body">{project.body}</a>
+                    {project.data && <div class="source">View source on: <a href={project.from} target="_blank" rel="noopener noreferrer">{project.data || project.from}</a></div>}
+                </div>
+            </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .projects {
+        padding: 20px;
+        margin-bottom: 100px;
+    }
+    .title {
+        text-align: center;
+    }
+    .subtitle {
+        text-align: center;
+        margin-bottom: 70px;
+        max-width: 600px;
+        margin-inline: auto;
+        color: #727888;
+    }
+    .cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 8vh 2vw;
+    }
+    .item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .card {
+        width: 100%;
+        max-width: 320px;
+        padding: 10px;
+        background-color: #31355092;
+        box-shadow: 10px 30px 0 0 #2b2e5465;
+        border: 1px solid #8185b465;
+        border-radius: 5px;
+        transition: .1s;
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+    }
+    .card a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .card:hover {
+        box-shadow: 0 0 0 3px #8185b465;
+    }
+    .image {
+        width: 100%;
+        border: 1px solid #8185b423;
+        background-color: #0c0d199c;
+        border-radius: 5px;
+    }
+    .name {
+        font-weight: 500;
+    }
+    .body {
+        color: #8e99b4 !important;
+        font-size: 16px;
+    }
+    .source {
+        color: #727888;
+        font-size: 15px;
+    }
+
+    .source > a {
+        color: var(--logo-color);
+    }
+    .source > a:hover {
+        text-decoration: underline;
+    }
+
+</style>

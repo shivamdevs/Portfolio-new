@@ -1,0 +1,42 @@
+---
+import Projects from '../../components/Projects.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const PROJECTS = [
+	{
+		icon: "https://d33wubrfki0l68.cloudfront.net/63be68296db87e5f444e3348/screenshot_2023-01-11-07-42-02-0000.png",
+		name: "Phone Directory 2",
+		body: "A ReactJs based phone directory application. Now contacts can be changed anytime needed.",
+		href: "https://phone-directory-2.starter.myoasis.tech",
+        data: "Github",
+        from: "https://github.com/shivamdevs/Phone-directory-2-starter-project",
+	},
+	{
+		icon: "https://d33wubrfki0l68.cloudfront.net/63bebe6accc8e60b10f88398/screenshot_2023-01-11-13-49-59-0000.png",
+		name: "Phone Directory",
+		body: "A ReactJs based phone directory application. Stored data per session and vanishes when reloaded.",
+		href: "https://phone-directory.starter.myoasis.tech",
+        data: "Github",
+        from: "https://github.com/shivamdevs/Phone-directory-starter-project",
+	},
+	{
+		icon: "https://d33wubrfki0l68.cloudfront.net/63be7b6eb95e95718c5a3d3a/screenshot_2023-01-11-09-04-21-0000.png",
+		name: "Health Tracker",
+		body: "ReactJs based static health tracker with working BMI calculator. First approach towards SPA.",
+		href: "https://health-tracker.starter.myoasis.tech",
+        data: "Github",
+        from: "https://github.com/shivamdevs/Health-tracker-starter",
+	},
+];
+---
+
+<Layout title="Starter Projects">
+    <Projects
+        title="My Starter Projects"
+        subtitle="These are the projects that I started with in the filed of Web Development (and the only ones which were not lost in mistake)."
+        projects={PROJECTS}
+    />
+</Layout>
+
+<style>
+</style>

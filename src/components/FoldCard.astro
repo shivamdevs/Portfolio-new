@@ -1,0 +1,33 @@
+---
+export interface Props {
+	fold?: boolean;
+}
+
+const { fold } = Astro.props;
+---
+
+<section class="fold" data-fold={fold ?? false}>
+    <div class="inner">
+        <slot />
+    </div>
+</section>
+
+<style>
+    .fold {
+        background: #2d6ef555;
+        background: linear-gradient(180deg, transparent, #061b810d, transparent, transparent);
+    }
+    .fold[data-fold] .inner {
+        margin-bottom: -250px;
+    }
+    .fold[data-fold] .inner {
+        padding-bottom: 300px;
+    }
+    .inner {
+        padding: 50px 20px;
+        text-align: center;
+        margin-inline: auto;
+        max-width: 800px;
+        width: 100%;
+    }
+</style>

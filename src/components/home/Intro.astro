@@ -1,0 +1,116 @@
+---
+---
+
+<section class="intro">
+    <div class="intro-card">
+        <div class="intro-box">
+            <div class="intro-name"><img class="image" src="/android-chrome-512x512.png" alt="" /> Shivam Dewangan</div>
+            <div class="intro-tagline">I design and code beautifully simple things, and I love what I do.</div>
+            <div class="intro-anchors">
+                <a class="intro-explore" href="/projects"><i class="far fa-radar"></i> Explore my work</a>
+                <a class="intro-explore" href="/starter"><i class="far fa-circle-play"></i> Starter Projects</a>
+                <a class="intro-explore" href="/working"><i class="far fa-triangle-person-digging"></i> Currently working</a>
+                <a class="intro-explore" href="contact"><i class="far fa-phone"></i> Contact me</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .intro {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding-block: 60px;
+    }
+    .intro-card {
+        display: flex;
+        flex: 1;
+        min-width: 60%;
+        max-width: 800px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 10vh 10px;
+    }
+    .intro-box {
+        display: flex;
+        flex-direction: column;
+        min-width: 80%;
+        max-width: 600px;
+        width: 100%;
+    }
+    @media screen and (min-width:1101px) {
+        .intro {
+            background-position: left;
+            background-size: 700px;
+            background-repeat: no-repeat;
+            background-image: url('/intro-girl.svg');
+        }
+        .intro,
+        .intro-box {
+            justify-content: flex-end;
+        }
+        .intro-card {
+            padding: 20vh 10px;
+        }
+    }
+    .intro-name {
+        font-size: 2.5em;
+        gap: 10px;
+        width: 100%;
+        font-family: 'Signika', sans-serif;
+        color: var(--logo-color);
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-block: 20px;
+    }
+    .intro-name img {
+        max-width: 100%;
+        width: 50px;
+    }
+    .intro-tagline {
+        padding: 10px;
+    }
+    .intro-anchors {
+        margin-top: 7vh;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        padding-inline: 10px;
+        max-width: 650px;
+    }
+    .intro-explore {
+        display: block;
+        border-radius: 10px;
+        padding: 20px;
+        text-decoration: none;
+        transition: .1s;
+        min-width: calc(50% - 20px);
+        flex: 1;
+        text-align: center;
+        border: 1px solid var(--logo-color);
+        color: var(--layout-color);
+        position: relative;
+        background: var(--color-bg);
+    }
+    .intro-explore:hover {
+        box-shadow: 0 0 30px -5px inset var(--logo-color);
+    }
+    @media screen and (max-width:601px) {
+        .intro {
+            padding: 0;
+        }
+        .intro-name {
+            font-size: 1.5em;
+        }
+        .intro-explore {
+            min-width: 100%;
+        }
+    }
+</style>
