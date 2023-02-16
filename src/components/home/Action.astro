@@ -1,0 +1,56 @@
+---
+    export interface Props {
+        title?: string;
+        info?: string;
+        text?: string;
+        link?: string;
+    };
+
+    const { title, info, text, link } = Astro.props as Props;
+---
+
+<section class="action activity fade-slide-in">
+    <h2 class="title">{title}</h2>
+    <p class="text">{info}</p>
+    <a href={link} class="button">{text}</a>
+</section>
+
+<style>
+    .action {
+        margin: 15vh auto;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 1000px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .title {
+        color: dodgerblue;
+        margin: 0;
+    }
+    .text {
+        color: #979daf;
+    }
+
+    .button {
+        border: 1px solid #fff3;
+        display: inline-flex;
+        padding: 12px 30px;
+        border-radius: 5px;
+        background: #2bc48a;
+        color: #000;
+        font-weight: 500;
+        text-decoration: none;
+        transition: .2s;
+    }
+    .button:hover {
+        background-color: transparent;
+        border-color: #2bc48a;
+        cursor: pointer;
+        color: #2bc48a;
+    }
+</style>

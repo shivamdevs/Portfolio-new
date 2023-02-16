@@ -1,0 +1,213 @@
+---
+---
+
+<section class="apply">
+    <div class="wrapper activity fade-slide-in">
+        <h2 class="header">Programming Languages in my Skillset</h2>
+        <div class="part activity fade-slide-in">
+            <div class="content">
+                <div class="title">ReactJS</div>
+                <ul class="descript">
+                    <li>Extensive experience and expertise in React</li>
+                    <li>
+                        Proficient in utilizing various features and
+                        functionalities
+                    </li>
+                    <li>
+                        In-depth knowledge enables me to build user-friendly
+                        interfaces
+                    </li>
+                    <li>
+                        Can create responsive, scalable, and high-performing web
+                        applications
+                    </li>
+                </ul>
+            </div>
+            <div class="imager">
+                <img src="/images/home/react.svg" alt="" />
+            </div>
+        </div>
+        <div class="part reverse activity fade-slide-in">
+            <div class="imager">
+                <img src="/images/home/rocket.svg" alt="" />
+            </div>
+            <div class="content">
+                <div class="title">Astro</div>
+                <ul class="descript">
+                    <li>Proficient in working with Astro framework</li>
+                    <li>
+                        Can develop fast, efficient, and easily maintainable web
+                        applications
+                    </li>
+                    <li>
+                        Skilled in utilizing its templating system, data
+                        management, and build tools
+                    </li>
+                    <li>Can deliver optimized and SEO-friendly websites</li>
+                </ul>
+            </div>
+        </div>
+        <div class="part activity fade-slide-in">
+            <div class="content">
+                <div class="title">JavaScript</div>
+                <ul class="descript">
+                    <li>
+                        Proficient in JavaScript with experience in various
+                        libraries and frameworks
+                    </li>
+                    <li>
+                        Knowledgeable in DOM manipulation, AJAX, and JSON APIs
+                    </li>
+                    <li>
+                        Skilled in creating interactive and responsive web
+                        interfaces
+                    </li>
+                    <li>
+                        Experienced in optimizing JavaScript code for faster
+                        load times
+                    </li>
+                </ul>
+            </div>
+            <div class="imager">
+                <img src="/images/home/js.svg" alt="" />
+            </div>
+        </div>
+        <div class="part reverse activity fade-slide-in">
+            <div class="imager">
+                <img src="/images/home/html.svg" alt="" />
+            </div>
+            <div class="content">
+                <div class="title">HTML</div>
+                <ul class="descript">
+                    <li>
+                        Proficient in HTML development with knowledge of latest
+                        HTML5 standards
+                    </li>
+                    <li>
+                        Skilled in creating semantic, accessible, and responsive
+                        web pages
+                    </li>
+                    <li>
+                        Can build clean and well-structured code for optimal
+                        performance
+                    </li>
+                    <li>Familiar with various HTML preprocessors and tools</li>
+                </ul>
+            </div>
+        </div>
+        <div class="part activity fade-slide-in">
+            <div class="content">
+                <div class="title">PHP</div>
+                <ul class="descript">
+                    <li>
+                        Proficient in PHP development with experience in various
+                        PHP frameworks
+                    </li>
+                    <li>
+                        Knowledgeable in object-oriented programming, database
+                        integration, and security practices
+                    </li>
+                    <li>
+                        Can build scalable web applications with clean and
+                        maintainable code
+                    </li>
+                    <li>
+                        Experienced in integrating with third-party APIs and web
+                        services
+                    </li>
+                </ul>
+            </div>
+            <div class="imager">
+                <img src="/images/home/php.svg" alt="" />
+            </div>
+        </div>
+        <div class="part reverse activity fade-slide-in">
+            <div class="imager">
+                <img src="/images/home/css.svg" alt="" />
+            </div>
+            <div class="content">
+                <div class="title">CSS</div>
+                <ul class="descript">
+                    <li>
+                        Proficient in CSS development with knowledge of latest
+                        CSS3 standards
+                    </li>
+                    <li>
+                        Skilled in creating responsive and accessible web
+                        designs
+                    </li>
+                    <li>Can build well-structured and maintainable CSS code</li>
+                    <li>Familiar with various CSS preprocessors and tools</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .header {
+        text-align: center;
+        padding-inline: 20px;
+    }
+    .apply {
+        width: 100%;
+        margin-block: 10vh;
+        padding: 10px;
+    }
+    .wrapper {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        gap: 5vw;
+        margin-inline: auto;
+        max-width: 1200px;
+    }
+    .part {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 50px;
+    }
+    .part > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imager {
+        max-width: 300px;
+    }
+    .content {
+        text-align: left;
+        align-items: stretch;
+        gap: 20px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .descript {
+        text-align: justify;
+        font-size: 16px;
+        color: #727888;
+    }
+
+
+
+    @media (max-width: 767.8px) {
+        .part {
+            flex-direction: column;
+            margin-bottom: 10vh;
+        }
+        .part.reverse {
+            flex-direction: column-reverse;
+        }
+        .imager {
+            margin-top: -5vh;
+            max-width: 250px;
+        }
+        .content {
+            padding-inline: 10px 20px;
+        }
+    }
+</style>

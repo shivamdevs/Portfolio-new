@@ -6,7 +6,7 @@ export interface Props {
 const { fold } = Astro.props;
 ---
 
-<section class="fold" data-fold={fold ?? false}>
+<section class="fold activity fade-slide-in" data-fold={fold ?? false}>
     <div class="inner">
         <slot />
     </div>

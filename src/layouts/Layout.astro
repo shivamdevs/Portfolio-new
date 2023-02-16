@@ -31,6 +31,19 @@ const { title } = Astro.props;
 
 		<link
 			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
+		<script
+			is:inline
+			src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+		></script>
+
+		<script
+			is:inline
+			src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
+		></script>
+		<link
+			rel="stylesheet"
 			href="https://assets.myoasis.tech/icons/font-awesome-6/css/all.min.css"
 		/>
 	</head>
@@ -62,31 +75,11 @@ const { title } = Astro.props;
 	html {
 		color-scheme: dark;
 		background: #020408;
-		background: -webkit-linear-gradient(
-			top,
-			#02030c 50%,
-			#00052644 100%
-		);
-		background: -o-linear-gradient(
-			top,
-			#02030c 50%,
-			#00052644 100%
-		);
-		background: -ms-linear-gradient(
-			top,
-			#02030c 50%,
-			#00052644 100%
-		);
-		background: -moz-linear-gradient(
-			top,
-			#02030c 50%,
-			#00052644 100%
-		);
-		background: linear-gradient(
-			to bottom,
-			#02030c 50%,
-			#00052644 100%
-		);
+		background: -webkit-linear-gradient(top, #02030c 50%, #00052644 100%);
+		background: -o-linear-gradient(top, #02030c 50%, #00052644 100%);
+		background: -ms-linear-gradient(top, #02030c 50%, #00052644 100%);
+		background: -moz-linear-gradient(top, #02030c 50%, #00052644 100%);
+		background: linear-gradient(to bottom, #02030c 50%, #00052644 100%);
 		background-attachment: fixed;
 	}
 
@@ -114,6 +107,10 @@ const { title } = Astro.props;
 		font-family: inherit;
 		font-size: inherit;
 		font-weight: inherit;
+	}
+
+	img {
+		max-width: 100%;
 	}
 
 	input[type="search"]::-webkit-search-decoration,
@@ -154,4 +151,48 @@ const { title } = Astro.props;
 	.card-of-width.width-1200 {
 		max-width: 1200px;
 	}
+
+	.activity.fade-in {
+		transition: opacity 1s;
+		opacity: 0;
+	}
+	.activity.fade-in.active {
+		opacity: 1;
+	}
+	.activity.slide-in {
+		transition: top 1s;
+		position: relative;
+		top: 100px;
+	}
+	.activity.slide-in.active {
+		top: 0;
+	}
+	.activity.fade-slide-in {
+		transition: top 1s, opacity 1s;
+		position: relative;
+		opacity: 0;
+		top: 100px;
+	}
+	.activity.fade-slide-in.active {
+		opacity: 1;
+		top: 0;
+	}
 </style>
+
+<script load:client>
+	function detect_scroll_activity() {
+		document.querySelectorAll(".activity").forEach((item) => {
+			if (
+				item.getBoundingClientRect().top - window.innerHeight + 20 <
+				0
+			) {
+				item.classList.add("active");
+			} else {
+				item.classList.remove("active");
+			}
+		});
+	}
+
+	document.addEventListener("scroll", detect_scroll_activity);
+	detect_scroll_activity();
+</script>
