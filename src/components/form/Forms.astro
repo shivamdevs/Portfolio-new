@@ -1,0 +1,46 @@
+---
+---
+
+<section class="forms">
+    <form action="" class="form">
+        <slot />
+        <center><button class="button" type="submit">Send Message</button></center>
+        <div class="note">* Note: I appreciate your message and will do my best to respond as soon as possible. Thank you for your patience in the meantime.</div>
+    </form>
+</section>
+
+<style>
+    .forms {
+        padding: 20px;
+    }
+    .form {
+        border: 1px solid #fff4;
+        border-radius: 8px;
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+    }
+    .note {
+        font-size: 14px;
+        color: #727888;
+    }
+    .button {
+        border: 1px solid #fff3;
+        display: inline-flex;
+        padding: 12px 30px;
+        border-radius: 5px;
+        background: #2bc48a;
+        margin: auto auto 40px;
+        color: #000;
+        font-weight: 500;
+        text-decoration: none;
+        transition: .2s;
+    }
+    .button:hover {
+        background-color: transparent;
+        border-color: #2bc48a;
+        cursor: pointer;
+        color: #2bc48a;
+    }
+</style>

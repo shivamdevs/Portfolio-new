@@ -1,9 +1,53 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import FormArea from "../../components/form/FormArea.astro";
+import FormInput from "../../components/form/FormInput.astro";
+import Forms from "../../components/form/Forms.astro";
+import FormSelect from "../../components/form/FormSelect.astro";
+import FormWrap from "../../components/form/FormWrap.astro";
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Startup">
+    <div class="header">
+        <h2 class="title">Startup</h2>
+        <p class="content">
+            Want to discuss a startup collaboration? I'm most definitely game.
+        </p>
+    </div>
+    <Forms>
+        <FormWrap>
+            <FormInput id="name" label="Full name" autoComplete="name" type="text" required={true} />
+            <FormInput id="email" label="Email address" autoComplete="email" type="text" required={true} />
+        </FormWrap>
+        <FormWrap>
+            <FormSelect id="project" label="Type of Project" required={true} options={[
+                ["HTML, CSS, JS", "ideal"],
+                ["ReactJS", "react"],
+                ["Astro.build", "astro"],
+            ]} />
+            <FormSelect id="interest" label="Your interest" required={true} options={[
+                ["Collaborator", "collab"],
+                ["Investor", "invest"],
+                ["Co-founder", "found"],
+            ]} />
+        </FormWrap>
+        <FormWrap>
+            <FormArea id="message" label="Additional details" required={true} />
+        </FormWrap>
+    </Forms>
 </Layout>
 
 <style>
+    .header {
+        margin: auto;
+        width: 100%;
+        max-width: 1000px;
+        text-align: center;
+    }
+    .title {
+        color: var(--logo-color);
+    }
+    .content {
+        color: #fff7;
+    }
 </style>

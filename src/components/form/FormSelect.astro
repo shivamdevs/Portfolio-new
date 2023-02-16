@@ -1,0 +1,59 @@
+---
+    export interface Props {
+        id?: string;
+        label?: string;
+        required?: boolean;
+        options: Array<Array<string>>;
+    }
+
+    let { id, label, required, options } = Astro.props as Props;
+
+    let mandatory = required ? "*" : "";
+---
+
+<div class="group">
+    <label for={id}>{label} <span>{mandatory}</span></label>
+    <select id={id} required={required}>
+        {options?.map(option => (
+            <option value={option[1]}>{option[0]}</option>
+        ))}
+    </select>
+</div>
+
+<style>
+    .group {
+        width: 100%;
+        position: relative;
+    }
+    label {
+        position: absolute;
+        inset: 10px 0 auto 0;
+        display: block;
+        width: 100%;
+        padding: 0 20px;
+        font-size: 16px;
+        color: #727888;
+    }
+    select {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        padding: 40px 20px 10px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #343a4c;
+    }
+
+    label:has(+ select:focus) {
+        color: var(--logo-color);
+    }
+
+    label > span {
+        color: red;
+    }
+
+    select:focus {
+        border-bottom-color: var(--logo-color);
+    }
+</style>

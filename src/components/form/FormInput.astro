@@ -1,0 +1,56 @@
+---
+    export interface Props {
+        id?: string;
+        type?: any;
+        label?: string;
+        required?: boolean;
+        autoComplete?: string;
+    }
+
+    let { id, type, label, required, autoComplete } = Astro.props as Props;
+
+    let mandatory = required ? "*" : "";
+---
+
+<div class="group">
+    <label for={id}>{label} <span>{mandatory}</span></label>
+    <input id={id} type={type || "text"} autocomplete={autoComplete || "off"} required={required} />
+</div>
+
+<style>
+    .group {
+        width: 100%;
+        position: relative;
+    }
+    label {
+        position: absolute;
+        inset: 10px 0 auto 0;
+        display: block;
+        width: 100%;
+        padding: 0 20px;
+        font-size: 16px;
+        color: #727888;
+    }
+    input {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        padding: 40px 20px 10px;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #343a4c;
+    }
+
+    label:has(+ input:focus) {
+        color: var(--logo-color);
+    }
+
+    label > span {
+        color: red;
+    }
+
+    input:focus {
+        border-bottom-color: var(--logo-color);
+    }
+</style>
