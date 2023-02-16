@@ -60,7 +60,7 @@ import Action from "./Action.astro";
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide item">
+            <!-- <div class="swiper-slide item">
                 <div class="card container">
                     <Action
                         title="And many more!"
@@ -69,11 +69,11 @@ import Action from "./Action.astro";
                         link="/project"
                     />
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev hidden"></div>
+        <div class="swiper-button-next hidden"></div>
     </div>
 </section>
 
@@ -120,6 +120,14 @@ import Action from "./Action.astro";
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    @media (max-width: 767.8px) {
+        .hidden {
+            display: none;
+        }
+        .item {
+            padding: 20px 30px;
+        }
     }
 </style>
 
