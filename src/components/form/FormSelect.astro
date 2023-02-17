@@ -13,7 +13,7 @@
 
 <div class="group">
     <label for={id}>{label} <span>{mandatory}</span></label>
-    <select id={id} required={required}>
+    <select id={id} name={id} required={required}>
         {options?.map(option => (
             <option value={option[1]}>{option[0]}</option>
         ))}

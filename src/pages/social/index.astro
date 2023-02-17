@@ -1,0 +1,57 @@
+---
+import Projects from "../../components/Projects.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const LINKS = [
+	{
+		icon: "/images/social/twitter.png",
+		name: "Twitter",
+		body: "@shivam0dewangan",
+		href: "/social/twitter",
+	},
+	{
+		icon: "/images/social/linkedin.png",
+		name: "LinkedIn",
+		body: "@shivam-dewangan-04773b1b9",
+		href: "/social/linkedin",
+	},
+	{
+		icon: "/images/social/github.png",
+		name: "Github",
+		body: "@Shivamdevs",
+		href: "/social/github",
+	},
+	{
+		icon: "/images/social/email.webp",
+		name: "Mail",
+		body: "shivam0dewangan@gmail.com",
+		href: "/social/email",
+	},
+];
+---
+
+<Layout title="Social Platforms">
+	<div class="header">
+		<h2 class="title">Social Platforms</h2>
+		<p class="content">
+			If you'd like to connect with me on social media, please choose your
+			preferred platform from the options below.
+		</p>
+	</div>
+	<Projects projects={LINKS} />
+</Layout>
+
+<style>
+	.header {
+		margin: auto;
+		width: 100%;
+		max-width: 1000px;
+		text-align: center;
+	}
+	.title {
+		color: var(--logo-color);
+	}
+	.content {
+		color: #fff7;
+	}
+</style>

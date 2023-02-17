@@ -1,24 +1,31 @@
 ---
-import FlyCard from '../components/FlyCard.astro';
-import FoldCard from '../components/FoldCard.astro';
-import Action from '../components/home/Action.astro';
-import Application from '../components/home/Application.astro';
-import Intro from '../components/home/Intro.astro';
-import IntroCards from '../components/home/IntroCards.astro';
-import Swipper from '../components/home/Swipper.astro';
-import Layout from '../layouts/Layout.astro';
+import FlyCard from "../components/FlyCard.astro";
+import FoldCard from "../components/FoldCard.astro";
+import Action from "../components/home/Action.astro";
+import Application from "../components/home/Application.astro";
+import Intro from "../components/home/Intro.astro";
+import IntroCards from "../components/home/IntroCards.astro";
+import Swipper from "../components/home/Swipper.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="">
     <Intro />
     <FoldCard>
         <h1>Hi, I’m Shivam Dewangan. Nice to meet you.</h1>
-        <p>My journey as a full-stack developer started over 4 years ago, when i was still a High school graduate. Since then I became curious to learn more about this field. I learned many languages over time, and also took this route in the College by applying in full-stack programming. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</p>
+        <p>
+            Four years ago, my journey as a full-stack developer began after
+            high school. I'm passionate about continual learning and
+            improvement, always striving to solve design challenges with
+            creativity and curiosity. I approach every project with confidence
+            and enthusiasm, and love what I do in this dynamic and constantly
+            evolving field.
+        </p>
     </FoldCard>
     <Swipper />
     <FlyCard width="1200" area={true}>
-		<IntroCards/>
-	</FlyCard>
+        <IntroCards />
+    </FlyCard>
     <Action
         title="Drop Me a Line"
         info="I'm always happy to connect with other professionals and creatives. Whether you're looking for a collaborator, want to discuss industry trends, or just want to chat about your favorite projects, drop me a line and let's get the conversation started."
@@ -34,6 +41,4 @@ import Layout from '../layouts/Layout.astro';
     />
 </Layout>
 
-<style>
-    
-</style>
+<style></style>
