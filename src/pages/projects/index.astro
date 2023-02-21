@@ -1,133 +1,139 @@
 ---
-import Projects from '../../components/Projects.astro';
-import Layout from '../../layouts/Layout.astro';
+import Projects from "../../components/Projects.astro";
+import Layout from "../../layouts/Layout.astro";
 
 const PROJECTS = [
+	{
+		icon: "https://d33wubrfki0l68.cloudfront.net/63f52c51cd65e20008512791/screenshot_2023-02-21-20-41-54-0000.png",
+		name: "Syncloud",
+		body: "This file manager app allows users to easily manage, upload, edit, and delete files on the web, (Cloud services are not currently supported).",
+		href: "https://syncloud.myoasis.tech",
+		data: "Github",
+		from: "https://github.com/shivamdevs/Syncloud-app",
+	},
 	{
 		icon: "https://d33wubrfki0l68.cloudfront.net/63d8bbaabfa61a0008c12a38/screenshot_2023-01-31-06-57-19-0000.png",
 		name: "CodePlay",
 		body: "Create and explore HTML projects with a ReactJs-based editor. Access a variety of web simulation projects contributed by other users.",
 		href: "https://codeplay.myoasis.tech",
-        data: "Github",
-        from: "https://github.com/shivamdevs/CodePlay",
+		data: "Github",
+		from: "https://github.com/shivamdevs/CodePlay",
 	},
 	{
 		icon: "https://d33wubrfki0l68.cloudfront.net/63cbba456f78860009fdd035/screenshot_2023-01-21-10-11-59-0000.png",
 		name: "Chats - MeChat",
 		body: "A real-time chatting application built with ReactJs, allowing you to connect and chat with anyone on the server.",
 		href: "https://chat.myoasis.tech",
-        data: "Github",
-        from: "https://github.com/shivamdevs/Chat-app",
+		data: "Github",
+		from: "https://github.com/shivamdevs/Chat-app",
 	},
 	{
 		icon: "https://d33wubrfki0l68.cloudfront.net/63be6457b95e955eea5a3dbd/screenshot_2023-01-11-07-25-57-0000.png",
 		name: "Tasks",
 		body: "Efficient task management at your fingertips with this app: Create, organize, and update your tasks and task lists.",
 		href: "https://tasks.myoasis.tech",
-        data: "Github",
-        from: "https://github.com/shivamdevs/Tasks-app",
+		data: "Github",
+		from: "https://github.com/shivamdevs/Tasks-app",
 	},
 	{
 		icon: "https://d33wubrfki0l68.cloudfront.net/63be6d230416b969f363e687/screenshot_2023-01-11-08-03-21-0000.png",
 		name: "Private Note - Lite",
 		body: "Keep your notes private with this lightweight version of a popular note-taking app. Create and share secure, self-destructing notes with ease.",
 		href: "https://private-lite.notes.myoasis.tech",
-        data: "Github",
-        from: "https://github.com/shivamdevs/Notes-lite-app",
+		data: "Github",
+		from: "https://github.com/shivamdevs/Notes-lite-app",
 	},
 	{
 		icon: "https://d33wubrfki0l68.cloudfront.net/63c65da1b6015e0708101ae3/screenshot_2023-01-17-08-35-32-0000.png",
 		name: "Notes - Share",
 		body: "Share your notes to anyone. Based on ctxt.io. Create notes and share the links to anyone.",
 		href: "https://notes.myoasis.tech",
-        data: "Github",
-        from: "https://github.com/shivamdevs/Notes-app",
+		data: "Github",
+		from: "https://github.com/shivamdevs/Notes-app",
 	},
 	{
 		icon: "https://d33wubrfki0l68.cloudfront.net/63be66065d805f5fabfa83ce/screenshot_2023-01-11-07-32-49-0000.png",
 		name: "To do - lists",
 		body: "You can improve your task management efficiency by creating a to-do list that is stored on your local storage.",
 		href: "https://todo.project.myoasis.tech",
-        data: "Github",
-        from: "https://github.com/shivamdevs/To-do-project",
+		data: "Github",
+		from: "https://github.com/shivamdevs/To-do-project",
 	},
 ];
 
-
 const OLDERS = [
 	{
-        icon: "https://lh3.googleusercontent.com/tpx-mSMPFaVZ36tgnB_rzCOjkFHXRRRDH1hTuz2pPpx4dl5X_uxpqhgydYbgRoeJk3E0FQ53F9f3hFHcZ6L6sAmsSQ=w640-h400-e365-rj-sc0x00ffffff",
+		icon: "https://lh3.googleusercontent.com/tpx-mSMPFaVZ36tgnB_rzCOjkFHXRRRDH1hTuz2pPpx4dl5X_uxpqhgydYbgRoeJk3E0FQ53F9f3hFHcZ6L6sAmsSQ=w640-h400-e365-rj-sc0x00ffffff",
 		name: "Dom-Selector-Extension",
 		body: "Access the NodeName, classList, id, and styles of elements easily with this browser extension.",
 		href: "https://chrome.google.com/webstore/detail/dom-selector/bmnofgbgldbkkpgpahilcgalnjocgbla",
-        data: "Github",
-        from: "https://github.com/shivamdevs/Dom-Selector-Extension",
+		data: "Github",
+		from: "https://github.com/shivamdevs/Dom-Selector-Extension",
 	},
 	{
-        icon: "https://lh3.googleusercontent.com/j6fSEKHytOUyqihJYw0kORwCLlVNzdpVgMTBwbOKAoiVhNP2aGUiqosOVtlOG6ysdGlDmr8lD5nIB74T5BBNYaj6_w=w640-h400-e365-rj-sc0x00ffffff",
+		icon: "https://lh3.googleusercontent.com/j6fSEKHytOUyqihJYw0kORwCLlVNzdpVgMTBwbOKAoiVhNP2aGUiqosOVtlOG6ysdGlDmr8lD5nIB74T5BBNYaj6_w=w640-h400-e365-rj-sc0x00ffffff",
 		name: "Dom-Selector",
 		body: "Easily obtain the NodeName, classList, id, and styles of elements with this tool.",
 		href: "//github.com/shivamdevs/Dom-Selector",
-        data: "Github",
-        from: "https://github.com/shivamdevs/Dom-Selector",
+		data: "Github",
+		from: "https://github.com/shivamdevs/Dom-Selector",
 	},
 	{
 		name: "jScript",
 		body: "Experience smoother DOM manipulation with this Javascript library.",
 		href: "//github.com/shivamdevs/jScript",
-        data: "Github",
-        from: "https://github.com/shivamdevs/jScript",
+		data: "Github",
+		from: "https://github.com/shivamdevs/jScript",
 	},
 	{
 		name: "WebStorage",
 		body: "Simplify local or session storage value management with this object-oriented Javascript library.",
 		href: "//github.com/shivamdevs/WebStorage",
-        data: "Github",
-        from: "https://github.com/shivamdevs/WebStorage",
+		data: "Github",
+		from: "https://github.com/shivamdevs/WebStorage",
 	},
 	{
 		name: "Propbar",
 		body: "Provide a unique user experience by displaying custom alerts instead of system alerts with this tool.",
 		href: "https://codeplay.myoasis.tech/play/8eb7o4b",
-        data: "Github",
-        from: "https://github.com/shivamdevs/PropBar",
+		data: "Github",
+		from: "https://github.com/shivamdevs/PropBar",
 	},
 	{
 		name: "Propalert",
 		body: "Unify your website's alert messaging with this centralized alert popup system.",
 		href: "//github.com/shivamdevs/PropAlert",
-        data: "Github",
-        from: "https://github.com/shivamdevs/PropAlert",
+		data: "Github",
+		from: "https://github.com/shivamdevs/PropAlert",
 	},
 	{
 		name: "Console",
 		body: "Visualize browser console data directly in your web page with this handy tool.",
 		href: "https://codeplay.myoasis.tech/play/v6isxok",
-        data: "Github",
-        from: "https://github.com/shivamdevs/Console",
+		data: "Github",
+		from: "https://github.com/shivamdevs/Console",
 	},
 	{
 		name: "Context menu",
 		body: "Easily create and customize your own popup/context menus with this convenient tool.",
 		href: "https://codeplay.myoasis.tech/play/hnlfkpa",
-        data: "Github",
-        from: "https://github.com/shivamdevs/ContextMenu",
+		data: "Github",
+		from: "https://github.com/shivamdevs/ContextMenu",
 	},
 ];
 ---
 
 <Layout title="Projects">
-    <Projects
-        title="Recent Projects"
-        subtitle="Here are a few of my past design projects, some of which are no longer active due to various reasons."
-        projects={PROJECTS}
-    />
-    <Projects
-        title="Previous Projects"
-        subtitle="Here are some additional projects I've worked on, mainly focused on JavaScript and can be easily imported as script files."
-        projects={OLDERS}
-    />
+	<Projects
+		title="Recent Projects"
+		subtitle="Here are a few of my past design projects, some of which are no longer active due to various reasons."
+		projects={PROJECTS}
+	/>
+	<Projects
+		title="Previous Projects"
+		subtitle="Here are some additional projects I've worked on, mainly focused on JavaScript and can be easily imported as script files."
+		projects={OLDERS}
+	/>
 </Layout>
 
-<style>
-</style>
+<style></style>
