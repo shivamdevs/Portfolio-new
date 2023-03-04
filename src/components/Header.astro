@@ -10,11 +10,11 @@
     </div>
     <div class="item link mobile-hidden">
         <a href="/">Home</a>
-        <a href="/projects">Projects</a>
-        <a href="/starter">Starter Projects</a>
-        <a href="/working">Working Projects</a>
-        <a href="/startup">Startup</a>
-        <a href="/contact">Say Hello</a>
+        <a href="/projects/">Projects</a>
+        <a href="/starter/">Starter Projects</a>
+        <a href="/working/">Working Projects</a>
+        <a href="/startup/">Startup</a>
+        <a href="/contact/">Say Hello</a>
     </div>
     <div class="item burger desktop-hidden">
         <button id="openmenu" type="button" class="btn">
@@ -170,12 +170,9 @@
             a.classList.add("active");
     });
 
-    function headerScroll() {}
-    document.addEventListener("scroll", headerScroll);
-
     const headerLinkArea = document.querySelector(".link").getBoundingClientRect().width +
     document.querySelector(".header .icon").getBoundingClientRect().width + 100;
-    
+
     function headerResize() {
         if (window.innerWidth < headerLinkArea) {
             document.querySelector(".header").classList.add("mobile");
