@@ -4,6 +4,14 @@ import Layout from '../../layouts/Layout.astro';
 
 const PROJECTS = [
 	{
+		icon: "https://d33wubrfki0l68.cloudfront.net/64aa82487422120008e5dc68/screenshot_2023-07-09-09-49-17-0000.png",
+		name: "Resume Maker",
+		body: "Resume is the ultimate app for effortlessly creating professional resumes with customizable templates and pre-written content suggestions.",
+		href: "https://resume.myoasis.tech",
+		data: "Github",
+		from: "https://github.com/shivamdevs/Resume-maker",
+	},
+	{
 		icon: "https://d33wubrfki0l68.cloudfront.net/63f52c51cd65e20008512791/screenshot_2023-02-21-20-41-54-0000.png",
 		name: "Syncloud",
 		body: "This file manager app allows users to easily manage, upload, edit, and delete files on the web, (Cloud services are not currently supported).",
@@ -57,7 +65,7 @@ const PROJECTS = [
 <Layout title="Working Projects">
     <Projects
         title="Currently Ongoing Projects"
-        subtitle="Here are a few projects I'm currently working on that are still in progress."
+        subtitle="Here are a few projects I'm currently working on that are still in progress or on holdup."
         projects={PROJECTS}
     />
 </Layout>
