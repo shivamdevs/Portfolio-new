@@ -22,6 +22,8 @@
                     <a href={project.href} target="_blank" rel="noopener noreferrer" class="name">{project.name}</a>
                     <a href={project.href} target="_blank" rel="noopener noreferrer" class="body">{project.body}</a>
                     {project.data && <div class="source">View source on: <a href={project.from} target="_blank" rel="noopener noreferrer">{project.data || project.from}</a></div>}
+		    {project.init && <div class="source">Created at: <span>{project.init}</span></div>}
+		    {project.updt && <div class="source">Updated at: <span>{project.updt}</span></div>}
                 </div>
             </div>
         ))}
@@ -100,6 +102,9 @@
     }
     .source > a:hover {
         text-decoration: underline;
+    }
+    .source > span {
+	color: white;
     }
 
 </style>
